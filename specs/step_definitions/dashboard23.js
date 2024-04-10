@@ -4,17 +4,21 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 Given('I am logged in as admin', () => {});*/
 
 Given('I have clicked the answer button', () => {
+  
   cy.visit("/admin");
-    cy.wait(2000);
+  cy.wait(500);
+  cy.get(".content > div > :nth-child(6)").click();
+  // cy.visit("/admin");
+  //   cy.wait(2000);
 
-     cy.document().then((doc) => {
-      doc
-         .querySelector(
-           "body > div.page > main > article > div > button:nth-child(6)"
-         )
-        .click();
-     });
-    cy.get(".content > div > :nth-child(6)", {timeout: 2000}).click();
+  //    cy.document().then((doc) => {
+  //     doc
+  //        .querySelector(
+  //          "body > div.page > main > article > div > button:nth-child(6)"
+  //        )
+  //       .click();
+  //    });
+    //cy.get(".content > div > :nth-child(6)", {timeout: 2000}).click();
 });
 
 Given('I see a search bar', () => {

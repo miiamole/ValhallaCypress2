@@ -9,8 +9,8 @@ Given('I see a box where I can accept terms and conditions', () => {
 });
 
 When('I click in the box', () => {
+  cy.wait(500);
   cy.get("input").click();
-  cy.wait(2000);
 });
 
 When('I click on the sign up link that appears', () => {
