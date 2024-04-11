@@ -4,21 +4,9 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 Given('I am logged in as admin', () => {});*/
 
 Given('I have clicked the answer button', () => {
-  
   cy.visit("/admin");
   cy.wait(500);
   cy.get(".content > div > :nth-child(6)").click();
-  // cy.visit("/admin");
-  //   cy.wait(2000);
-
-  //    cy.document().then((doc) => {
-  //     doc
-  //        .querySelector(
-  //          "body > div.page > main > article > div > button:nth-child(6)"
-  //        )
-  //       .click();
-  //    });
-    //cy.get(".content > div > :nth-child(6)", {timeout: 2000}).click();
 });
 
 Given('I see a search bar', () => {
@@ -47,13 +35,8 @@ When('I type {string} in the edit answer field', (thisWillBeUpdated) => {
    cy.get(":nth-child(16) > textarea.valid").type(thisWillBeUpdated);
 });
 
-// When('I change question to {string}', (a) => {
-//   cy.get(":nth-child(16) > textarea.valid");
-// });
-
-
 When("I change question to {string}", (newQuestion) => {
-  // Klicka på rullmenyn för att öppna den
+  // Klicka på rullmenyn
   cy.get(":nth-child(16) > select");
 });
 
