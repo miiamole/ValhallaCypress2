@@ -6,7 +6,7 @@ Given('I am logged in as admin', () => {});*/
 Given('I have clicked the answer button', () => {
   cy.visit("/admin");
   cy.wait(500);
-  cy.get(".content > div > :nth-child(6)").click();
+  cy.get("#B5").click();
 });
 
 Given('I see a search bar', () => {

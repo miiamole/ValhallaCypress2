@@ -1,8 +1,8 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Given("I am on the login page", () => {
-  cy.visit("/account/login");
-});
+// Given("I am on the login page", () => {
+//   cy.visit("/account/login");
+// });
 
 When("I type {string} in the username field", (username) => {
   cy.get(":nth-child(6) > .form-control").type(username);

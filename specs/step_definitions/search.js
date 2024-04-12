@@ -9,7 +9,9 @@ Given('I am on the category page', () => {
 });
 
 When('I click in the search bar', () => {
-  cy.get(".container > input").click();
+  cy.wait(1000);
+  
+  cy.get(".container > input").click({ force: true });
 });
 
 When('I type {string}', (SearchTerm) => {
@@ -17,7 +19,8 @@ When('I type {string}', (SearchTerm) => {
 });
 
 When('I click on the search button', () => {
-  cy.get(".container > button").click();
+  cy.wait(1000);
+  cy.get(".container > button").click({ force: true });
 });
 
 Then('I should see {string} in the filtered list', (SearchTerm) => {

@@ -14,7 +14,8 @@ Given("I see different buttons", () => {
 });
 
 When("I click the answer button", () => {
-  cy.get(".content > div > :nth-child(6)").click();
+  cy.wait(1000)
+  cy.get("#B5").click();
 });
 
 
